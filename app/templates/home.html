@@ -1,6 +1,5 @@
 <div>
   <h1>Front Page</h1>
-  {{ $scope.posts }}
   <div ng-repeat="posts in posts track by posts.data.id">
       <div>
         <a href="{{ posts.data.url }}" target="_blank">

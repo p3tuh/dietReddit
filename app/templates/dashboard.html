@@ -1,0 +1,25 @@
+<div>
+  <h1>DashBoard</h1>
+  <form ng-submit="addSubreddit(name)">
+    Enter a subreddit to add: <input type="text" ng-model="name" />
+  </form>
+  <div ng-repeat="posts in posts track by posts.data.id">
+      <div>
+        <a href="{{ posts.data.url }}" target="_blank">
+          <img ng-if="posts.data.thumbnail === '' || posts.data.thumbnail === 'self' " ng-src="img/RedditAlien.png"/>
+          <img ng-if="posts.data.thumbnail !== self" ng-src="{{ posts.data.thumbnail }}"/>
+        </a>
+
+        <a href="{{ posts.data.url }}" target="_blank">
+
+        Author: <a ng-href="http://www.reddit.com/user/{{ posts.data.author }}" target="_blank">{{ posts.data.author }}</a><br>
+        <b> {{ posts.data.title }}
+        Upvotes: {{ posts.data.ups }}<br>
+        SubReddit: {{ posts.data.subreddit }} <br>
+        <b>ID: {{ posts.data.id }} </b><br>
+        
+        <a ng-href="http://www.reddit.com{{ posts.data.permalink }}" target="_blank">Comments</a>
+        </a>
+      </div>
+    </div>
+</div>
