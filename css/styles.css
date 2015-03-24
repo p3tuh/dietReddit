@@ -1,0 +1,44 @@
+.container {
+	padding: 5px;
+	vertical-align: middle;
+	margin-top: 5px;
+}
+
+.postImage {
+    float: left;
+    width: 140px;
+    height: 128px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 128px;
+    text-align: center;
+}
+
+.postText {
+	margin-left: 10px;
+	width: 60%;
+	height: 128px;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.tagline {
+	word-wrap: break-word;
+	font-size: 80%;
+}
+
+.title {
+
+}
+
+.image {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.text {
+	display: inline-block;
+	margin-left: 10px;
+}

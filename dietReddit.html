@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:8000/#/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <title>dietReddit</title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./dietReddit_files/styles.css">
+  </head>
+
+  <body>
+  <div ng-app="dietReddit" class="ng-scope">
+    <script src="./dietReddit_files/angular.js"></script>
+    <script src="./dietReddit_files/angular-ui-router.min.js"></script>
+    <script src="./dietReddit_files/angular-animate.js"></script>
+
+    <script src="./dietReddit_files/app.js"></script>
+    <script src="./dietReddit_files/homeController.js"></script>
+    <script src="./dietReddit_files/dashController.js"></script>
+    <script src="./dietReddit_files/feedService.js"></script>
+    <script src="./dietReddit_files/subRedditController.js"></script>
+
+
+    <!-- <header ng-include="'app/templates/nav.html'"></header> -->
+
+    <!-- ui-view-anchor --><div ui-view="" class="container slide"><div class="ng-scope">
+  <h1>Front Page</h1>
+
+   <form ng-submit="changeSubreddit(subName)" class="ng-pristine ng-valid">
+    Enter a subreddit to view: <input type="text" ng-model="subName" class="ng-pristine ng-untouched ng-valid">
+  </form>
+
+  <!-- ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/AqLvXJh.gifv" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/_mhT04VNChkghAhwDdUjpTbR_2MFM4W5-2pX6NAZhuM.jpg" src="./dietReddit_files/_mhT04VNChkghAhwDdUjpTbR_2MFM4W5-2pX6NAZhuM.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/gifs/comments/302o0b/aww_yisss/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/gifs/comments/302o0b/aww_yisss/">
+              Aww yisss</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/gifs" class="ng-binding" href="http://www.reddit.com/r/gifs">/r/gifs</a> by: <a ng-href="http://www.reddit.com/user/MikeyTheDinosaur" target="_blank" class="ng-binding" href="http://www.reddit.com/user/MikeyTheDinosaur">MikeyTheDinosaur</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 5297 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/gifs/comments/302o0b/aww_yisss/" target="_blank" href="http://www.reddit.com/r/gifs/comments/302o0b/aww_yisss/"> <b class="ng-binding">789 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/otNszRE.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://a.thumbs.redditmedia.com/F06DXeT53vCD-0iIaWjJVyUSOLrXnViWTN16iknfhd0.jpg" src="./dietReddit_files/F06DXeT53vCD-0iIaWjJVyUSOLrXnViWTN16iknfhd0.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/pics/comments/3030c7/when_my_dad_was_16_he_entered_his_name_in_a/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/pics/comments/3030c7/when_my_dad_was_16_he_entered_his_name_in_a/">
+              When my dad was 16, he entered his name in a drawing, for what he thought was a sports jacket, at a local shoe store. The drawing was actually for a 1967 Shelby GT 500. He won.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/pics" class="ng-binding" href="http://www.reddit.com/r/pics">/r/pics</a> by: <a ng-href="http://www.reddit.com/user/notenoughtreesforme" target="_blank" class="ng-binding" href="http://www.reddit.com/user/notenoughtreesforme">notenoughtreesforme</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3288 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/pics/comments/3030c7/when_my_dad_was_16_he_entered_his_name_in_a/" target="_blank" href="http://www.reddit.com/r/pics/comments/3030c7/when_my_dad_was_16_he_entered_his_name_in_a/"> <b class="ng-binding">259 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.reddit.com/r/IAmA/comments/302dop/steve_buscemi_ama/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="self" src="./dietReddit_files/self"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/IAmA/comments/302dop/steve_buscemi_ama/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/IAmA/comments/302dop/steve_buscemi_ama/">
+              Steve Buscemi. AMA.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/IAmA" class="ng-binding" href="http://www.reddit.com/r/IAmA">/r/IAmA</a> by: <a ng-href="http://www.reddit.com/user/MrSteveBuscemi" target="_blank" class="ng-binding" href="http://www.reddit.com/user/MrSteveBuscemi">MrSteveBuscemi</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 5711 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/IAmA/comments/302dop/steve_buscemi_ama/" target="_blank" href="http://www.reddit.com/r/IAmA/comments/302dop/steve_buscemi_ama/"> <b class="ng-binding">3183 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/YUzOQpt.gifv" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://a.thumbs.redditmedia.com/QGVaQBt_ULB_yto2w4L3ks3WtdawFP23IP5OaS0Qfb0.jpg" src="./dietReddit_files/QGVaQBt_ULB_yto2w4L3ks3WtdawFP23IP5OaS0Qfb0.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/funny/comments/302iz2/tarzan_press/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/funny/comments/302iz2/tarzan_press/">
+              Tarzan Press.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/funny" class="ng-binding" href="http://www.reddit.com/r/funny">/r/funny</a> by: <a ng-href="http://www.reddit.com/user/__Internet__" target="_blank" class="ng-binding" href="http://www.reddit.com/user/__Internet__">__Internet__</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 4271 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/funny/comments/302iz2/tarzan_press/" target="_blank" href="http://www.reddit.com/r/funny/comments/302iz2/tarzan_press/"> <b class="ng-binding">639 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="https://www.youtube.com/watch?v=jFLAfVvWEBk" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://a.thumbs.redditmedia.com/jlIgN_hDmeSGwD6yHpkulbnpZDqJCaf9aLpqZhl4lK0.jpg" src="./dietReddit_files/jlIgN_hDmeSGwD6yHpkulbnpZDqJCaf9aLpqZhl4lK0.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/videos/comments/302cx4/these_kids_had_a_pretty_cool_concept_for_a_video/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/videos/comments/302cx4/these_kids_had_a_pretty_cool_concept_for_a_video/">
+              These kids had a pretty cool concept for a video.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/videos" class="ng-binding" href="http://www.reddit.com/r/videos">/r/videos</a> by: <a ng-href="http://www.reddit.com/user/Millure_" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Millure_">Millure_</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 5295 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/videos/comments/302cx4/these_kids_had_a_pretty_cool_concept_for_a_video/" target="_blank" href="http://www.reddit.com/r/videos/comments/302cx4/these_kids_had_a_pretty_cool_concept_for_a_video/"> <b class="ng-binding">1264 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="https://farm4.staticflickr.com/3928/15469288066_84ff96d7a7_k.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/S0dkY2bAOpC8GlfI7JRVxrOc1MXNashJoFPoxbDrXzM.jpg" src="./dietReddit_files/S0dkY2bAOpC8GlfI7JRVxrOc1MXNashJoFPoxbDrXzM.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/EarthPorn/comments/301xwn/a_hike_along_cascade_canyon_in_grand_teton/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/EarthPorn/comments/301xwn/a_hike_along_cascade_canyon_in_grand_teton/">
+              A hike along Cascade Canyon in Grand Teton National Park [OC] [2048x1252]</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/EarthPorn" class="ng-binding" href="http://www.reddit.com/r/EarthPorn">/r/EarthPorn</a> by: <a ng-href="http://www.reddit.com/user/omHK" target="_blank" class="ng-binding" href="http://www.reddit.com/user/omHK">omHK</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 4317 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/EarthPorn/comments/301xwn/a_hike_along_cascade_canyon_in_grand_teton/" target="_blank" href="http://www.reddit.com/r/EarthPorn/comments/301xwn/a_hike_along_cascade_canyon_in_grand_teton/"> <b class="ng-binding">180 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.redditblog.com/2015/03/announcing-embeddable-comment-threads.html" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/-UEGYlY8Ji9L5UVPJI9H0b2OaB0KYk-OCHq0mO-aLjk.jpg" src="./dietReddit_files/-UEGYlY8Ji9L5UVPJI9H0b2OaB0KYk-OCHq0mO-aLjk.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/blog/comments/302347/announcing_embeddable_comment_threads/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/blog/comments/302347/announcing_embeddable_comment_threads/">
+              Announcing embeddable comment threads</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/blog" class="ng-binding" href="http://www.reddit.com/r/blog">/r/blog</a> by: <a ng-href="http://www.reddit.com/user/tdohz" target="_blank" class="ng-binding" href="http://www.reddit.com/user/tdohz">tdohz</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3813 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/blog/comments/302347/announcing_embeddable_comment_threads/" target="_blank" href="http://www.reddit.com/r/blog/comments/302347/announcing_embeddable_comment_threads/"> <b class="ng-binding">886 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.patheos.com/blogs/friendlyatheist/2013/07/25/how-many-people-did-god-slaughter-in-the-bible-steve-wells-has-written-a-book-documenting-every-kill/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/fCqzMJfpV-dVa5OCOp802dxYfyh4jJmNWYB-1xQ8rfU.jpg" src="./dietReddit_files/fCqzMJfpV-dVa5OCOp802dxYfyh4jJmNWYB-1xQ8rfU.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/todayilearned/comments/302rl8/til_that_god_killed_over_2800000_in_the_bible/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/todayilearned/comments/302rl8/til_that_god_killed_over_2800000_in_the_bible/">
+              TIL that GOD killed over 2,800,000 in the bible. Satan killed 10.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/todayilearned" class="ng-binding" href="http://www.reddit.com/r/todayilearned">/r/todayilearned</a> by: <a ng-href="http://www.reddit.com/user/BuckiiAdfor" target="_blank" class="ng-binding" href="http://www.reddit.com/user/BuckiiAdfor">BuckiiAdfor</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 2212 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/todayilearned/comments/302rl8/til_that_god_killed_over_2800000_in_the_bible/" target="_blank" href="http://www.reddit.com/r/todayilearned/comments/302rl8/til_that_god_killed_over_2800000_in_the_bible/"> <b class="ng-binding">542 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://imgur.com/5KttpYl" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://a.thumbs.redditmedia.com/AVth9IvqdVobKPLzhbvvHQJ582QoYln_2CSRv0G-wl8.jpg" src="./dietReddit_files/AVth9IvqdVobKPLzhbvvHQJ582QoYln_2CSRv0G-wl8.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/aww/comments/301sm6/lucy_seems_pretty_happy_about_her_newly_adopted/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/aww/comments/301sm6/lucy_seems_pretty_happy_about_her_newly_adopted/">
+              Lucy seems pretty happy about her newly adopted family</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/aww" class="ng-binding" href="http://www.reddit.com/r/aww">/r/aww</a> by: <a ng-href="http://www.reddit.com/user/HenryAlbusNibbler" target="_blank" class="ng-binding" href="http://www.reddit.com/user/HenryAlbusNibbler">HenryAlbusNibbler</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 4088 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/aww/comments/301sm6/lucy_seems_pretty_happy_about_her_newly_adopted/" target="_blank" href="http://www.reddit.com/r/aww/comments/301sm6/lucy_seems_pretty_happy_about_her_newly_adopted/"> <b class="ng-binding">95 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.haaretz.com/news/diplomacy-defense/1.648465" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/worldnews/comments/301tlm/white_house_chief_of_staff_50_years_of_israeli/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/worldnews/comments/301tlm/white_house_chief_of_staff_50_years_of_israeli/">
+              White House chief of staff: 50 years of Israeli occupation must end- U.S. cannot pretend Netanyahu didn't say no Palestinian state would be established on his watch, Denis McDonough tells J Street conference in Washington.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/worldnews" class="ng-binding" href="http://www.reddit.com/r/worldnews">/r/worldnews</a> by: <a ng-href="http://www.reddit.com/user/Neo2199" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Neo2199">Neo2199</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3772 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/worldnews/comments/301tlm/white_house_chief_of_staff_50_years_of_israeli/" target="_blank" href="http://www.reddit.com/r/worldnews/comments/301tlm/white_house_chief_of_staff_50_years_of_israeli/"> <b class="ng-binding">1383 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://ak-hdl.buzzfed.com/static/2015-03/23/13/enhanced/webdr07/original-20985-1427132525-29.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/9CfNklJ4ovewdEZGnOix-dMgTTAs5WAapSk7gb03wQE.jpg" src="./dietReddit_files/9CfNklJ4ovewdEZGnOix-dMgTTAs5WAapSk7gb03wQE.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/photoshopbattles/comments/301s62/psbattle_little_boy_overwhelmed_while_meeting/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/photoshopbattles/comments/301s62/psbattle_little_boy_overwhelmed_while_meeting/">
+              PsBattle: Little boy overwhelmed while meeting garbage men</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/photoshopbattles" class="ng-binding" href="http://www.reddit.com/r/photoshopbattles">/r/photoshopbattles</a> by: <a ng-href="http://www.reddit.com/user/superkaramazovbros" target="_blank" class="ng-binding" href="http://www.reddit.com/user/superkaramazovbros">superkaramazovbros</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3747 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/photoshopbattles/comments/301s62/psbattle_little_boy_overwhelmed_while_meeting/" target="_blank" href="http://www.reddit.com/r/photoshopbattles/comments/301s62/psbattle_little_boy_overwhelmed_while_meeting/"> <b class="ng-binding">285 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.nbcphiladelphia.com/news/local/Arrest-Questioned-Killing-Dad-Stuhlman-Walking-Dog-Overbrook-296849631.html" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/news/comments/301hdb/please_dont_shoot_me_dog_walker_begs_for_life/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/news/comments/301hdb/please_dont_shoot_me_dog_walker_begs_for_life/">
+              'Please Don't Shoot Me': Dog Walker Begs for Life Before Being Shot And Killed By Highschool Freshmen</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/news" class="ng-binding" href="http://www.reddit.com/r/news">/r/news</a> by: <a ng-href="http://www.reddit.com/user/Ramy_" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Ramy_">Ramy_</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 4493 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/news/comments/301hdb/please_dont_shoot_me_dog_walker_begs_for_life/" target="_blank" href="http://www.reddit.com/r/news/comments/301hdb/please_dont_shoot_me_dog_walker_begs_for_life/"> <b class="ng-binding">3893 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://imgur.com/6evEuP4" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/EKAdcNvYOzR6vNi22HWCle_oeNaVUsRHVAVvTXx_-Qo.jpg" src="./dietReddit_files/EKAdcNvYOzR6vNi22HWCle_oeNaVUsRHVAVvTXx_-Qo.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/creepy/comments/3020u1/the_eyes_that_saw_a_nuke/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/creepy/comments/3020u1/the_eyes_that_saw_a_nuke/">
+              The eyes that saw a nuke</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/creepy" class="ng-binding" href="http://www.reddit.com/r/creepy">/r/creepy</a> by: <a ng-href="http://www.reddit.com/user/MonkeeMaN566" target="_blank" class="ng-binding" href="http://www.reddit.com/user/MonkeeMaN566">MonkeeMaN566</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 2542 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/creepy/comments/3020u1/the_eyes_that_saw_a_nuke/" target="_blank" href="http://www.reddit.com/r/creepy/comments/3020u1/the_eyes_that_saw_a_nuke/"> <b class="ng-binding">511 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/eEen5YD.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/dhqjmj1UPqQPm_m20nPVNM6398s8fJLemawaFA1XQOo.jpg" src="./dietReddit_files/dhqjmj1UPqQPm_m20nPVNM6398s8fJLemawaFA1XQOo.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/gaming/comments/3022m1/they_really_need_to_get_on_top_of_their_stuff/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/gaming/comments/3022m1/they_really_need_to_get_on_top_of_their_stuff/">
+              They really need to get on top of their stuff over at Bethesda Gaming Studios (Skyrim)</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/gaming" class="ng-binding" href="http://www.reddit.com/r/gaming">/r/gaming</a> by: <a ng-href="http://www.reddit.com/user/Capt_Applesauce" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Capt_Applesauce">Capt_Applesauce</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 2320 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/gaming/comments/3022m1/they_really_need_to_get_on_top_of_their_stuff/" target="_blank" href="http://www.reddit.com/r/gaming/comments/3022m1/they_really_need_to_get_on_top_of_their_stuff/"> <b class="ng-binding">210 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.reddit.com/r/Showerthoughts/comments/30191u/fourleaf_clovers_are_lucky_considering_our/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/Showerthoughts/comments/30191u/fourleaf_clovers_are_lucky_considering_our/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/Showerthoughts/comments/30191u/fourleaf_clovers_are_lucky_considering_our/">
+              Four-leaf clovers ARE lucky, considering our species has been systematically trying for some time now to remove them from the gene pool.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/Showerthoughts" class="ng-binding" href="http://www.reddit.com/r/Showerthoughts">/r/Showerthoughts</a> by: <a ng-href="http://www.reddit.com/user/banyanroot" target="_blank" class="ng-binding" href="http://www.reddit.com/user/banyanroot">banyanroot</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 4170 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/Showerthoughts/comments/30191u/fourleaf_clovers_are_lucky_considering_our/" target="_blank" href="http://www.reddit.com/r/Showerthoughts/comments/30191u/fourleaf_clovers_are_lucky_considering_our/"> <b class="ng-binding">548 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.reddit.com/r/AskReddit/comments/301h65/those_who_have_worked_at_disney_world_what_behind/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/AskReddit/comments/301h65/those_who_have_worked_at_disney_world_what_behind/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/AskReddit/comments/301h65/those_who_have_worked_at_disney_world_what_behind/">
+              Those who have worked at Disney world, what behind the scene stories do you have that the public doesn't see? [NSFW]</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/AskReddit" class="ng-binding" href="http://www.reddit.com/r/AskReddit">/r/AskReddit</a> by: <a ng-href="http://www.reddit.com/user/boojie_" target="_blank" class="ng-binding" href="http://www.reddit.com/user/boojie_">boojie_</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3357 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/AskReddit/comments/301h65/those_who_have_worked_at_disney_world_what_behind/" target="_blank" href="http://www.reddit.com/r/AskReddit/comments/301h65/those_who_have_worked_at_disney_world_what_behind/"> <b class="ng-binding">3297 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/n4CpGuj.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/nTY1qKjmjT4ArUlgcHij2eaWPC4wKCz46SqVWqqDLaU.jpg" src="./dietReddit_files/nTY1qKjmjT4ArUlgcHij2eaWPC4wKCz46SqVWqqDLaU.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/mildlyinteresting/comments/301eju/an_aisle_of_spam_in_kailua_hawaii/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/mildlyinteresting/comments/301eju/an_aisle_of_spam_in_kailua_hawaii/">
+              An aisle of SPAM in Kailua, Hawaii</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/mildlyinteresting" class="ng-binding" href="http://www.reddit.com/r/mildlyinteresting">/r/mildlyinteresting</a> by: <a ng-href="http://www.reddit.com/user/SassySSS" target="_blank" class="ng-binding" href="http://www.reddit.com/user/SassySSS">SassySSS</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3283 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/mildlyinteresting/comments/301eju/an_aisle_of_spam_in_kailua_hawaii/" target="_blank" href="http://www.reddit.com/r/mildlyinteresting/comments/301eju/an_aisle_of_spam_in_kailua_hawaii/"> <b class="ng-binding">426 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.washingtonpost.com/news/energy-environment/wp/2015/03/23/global-warming-is-now-slowing-down-the-circulation-of-the-oceans-with-potentially-dire-consequences/?tid=rssfeed" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/science/comments/3012yj/global_warming_is_now_slowing_down_the/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/science/comments/3012yj/global_warming_is_now_slowing_down_the/">
+              Global warming is now slowing down the circulation of the oceans — with potentially dire consequences</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/science" class="ng-binding" href="http://www.reddit.com/r/science">/r/science</a> by: <a ng-href="http://www.reddit.com/user/Libertatea" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Libertatea">Libertatea</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3744 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/science/comments/3012yj/global_warming_is_now_slowing_down_the/" target="_blank" href="http://www.reddit.com/r/science/comments/3012yj/global_warming_is_now_slowing_down_the/"> <b class="ng-binding">792 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://i.imgur.com/5GOOQ73.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/TXEDZ67qM53ejBK-70Seatdndb9xXBQdkYpHHvSRLMQ.jpg" src="./dietReddit_files/TXEDZ67qM53ejBK-70Seatdndb9xXBQdkYpHHvSRLMQ.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/space/comments/300ff9/plane_flew_over_as_i_took_a_shot_of_the_ring/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/space/comments/300ff9/plane_flew_over_as_i_took_a_shot_of_the_ring/">
+              Plane flew over as I took a shot of the Ring Nebula</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/space" class="ng-binding" href="http://www.reddit.com/r/space">/r/space</a> by: <a ng-href="http://www.reddit.com/user/Wonderpickles" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Wonderpickles">Wonderpickles</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 5093 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/space/comments/300ff9/plane_flew_over_as_i_took_a_shot_of_the_ring/" target="_blank" href="http://www.reddit.com/r/space/comments/300ff9/plane_flew_over_as_i_took_a_shot_of_the_ring/"> <b class="ng-binding">539 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.quotesvalley.com/images/46/nothing-can-stop-the-man-with-the-right-mental-attitude-from-achieving-his-goal-nothing-on-earth-can-help-the-man-with-the-wrong-mental-attitude1.jpg" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/GH9yEpa5O2vjabxfz3ppf7OxBKzwsr7kNV0ANK2wL0g.jpg" src="./dietReddit_files/GH9yEpa5O2vjabxfz3ppf7OxBKzwsr7kNV0ANK2wL0g.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/GetMotivated/comments/300uvi/image_t_jeff_knew_the_truth/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/GetMotivated/comments/300uvi/image_t_jeff_knew_the_truth/">
+              [Image] T. Jeff knew the Truth.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/GetMotivated" class="ng-binding" href="http://www.reddit.com/r/GetMotivated">/r/GetMotivated</a> by: <a ng-href="http://www.reddit.com/user/PM_me_your_pastries" target="_blank" class="ng-binding" href="http://www.reddit.com/user/PM_me_your_pastries">PM_me_your_pastries</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3310 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/GetMotivated/comments/300uvi/image_t_jeff_knew_the_truth/" target="_blank" href="http://www.reddit.com/r/GetMotivated/comments/300uvi/image_t_jeff_knew_the_truth/"> <b class="ng-binding">294 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="https://www.youtube.com/watch?v=gOW_azQbOjw" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://a.thumbs.redditmedia.com/6dYzjynJRZ9ePC2EECeO83OmzmVRVmYWLMINzgbn9u0.jpg" src="./dietReddit_files/6dYzjynJRZ9ePC2EECeO83OmzmVRVmYWLMINzgbn9u0.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/movies/comments/300n0k/first_full_trailer_for_mission_impossible_5_rogue/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/movies/comments/300n0k/first_full_trailer_for_mission_impossible_5_rogue/">
+              First full trailer for Mission Impossible 5: Rogue Nation</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/movies" class="ng-binding" href="http://www.reddit.com/r/movies">/r/movies</a> by: <a ng-href="http://www.reddit.com/user/Murreey" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Murreey">Murreey</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3563 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/movies/comments/300n0k/first_full_trailer_for_mission_impossible_5_rogue/" target="_blank" href="http://www.reddit.com/r/movies/comments/300n0k/first_full_trailer_for_mission_impossible_5_rogue/"> <b class="ng-binding">1701 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.reddit.com/r/tifu/comments/300pun/tifu_by_making_a_joke_about_my_sisters_fu/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/tifu/comments/300pun/tifu_by_making_a_joke_about_my_sisters_fu/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/tifu/comments/300pun/tifu_by_making_a_joke_about_my_sisters_fu/">
+              TIFU by making a joke about my sister's FU</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/tifu" class="ng-binding" href="http://www.reddit.com/r/tifu">/r/tifu</a> by: <a ng-href="http://www.reddit.com/user/4duxinarow" target="_blank" class="ng-binding" href="http://www.reddit.com/user/4duxinarow">4duxinarow</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3303 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/tifu/comments/300pun/tifu_by_making_a_joke_about_my_sisters_fu/" target="_blank" href="http://www.reddit.com/r/tifu/comments/300pun/tifu_by_making_a_joke_about_my_sisters_fu/"> <b class="ng-binding">1203 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://imgur.com/elhXCPw" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="http://b.thumbs.redditmedia.com/877_hmQ1G6-D3fusQe6yWk5s345LLEnuEXcsLeE9Y2o.jpg" src="./dietReddit_files/877_hmQ1G6-D3fusQe6yWk5s345LLEnuEXcsLeE9Y2o.jpg"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/food/comments/300jsw/since_its_so_hot_right_nowsteak_frites_with/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/food/comments/300jsw/since_its_so_hot_right_nowsteak_frites_with/">
+              Since it's so hot right now-Steak Frites with Truffle Butter</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/food" class="ng-binding" href="http://www.reddit.com/r/food">/r/food</a> by: <a ng-href="http://www.reddit.com/user/Crisscrosshotsauce" target="_blank" class="ng-binding" href="http://www.reddit.com/user/Crisscrosshotsauce">Crisscrosshotsauce</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 3769 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/food/comments/300jsw/since_its_so_hot_right_nowsteak_frites_with/" target="_blank" href="http://www.reddit.com/r/food/comments/300jsw/since_its_so_hot_right_nowsteak_frites_with/"> <b class="ng-binding">368 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="http://www.reddit.com/r/LifeProTips/comments/300w1y/lpt_improve_your_spelling_when_wordcheck_marks_a/" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src="self" src="./dietReddit_files/self"><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/LifeProTips/comments/300w1y/lpt_improve_your_spelling_when_wordcheck_marks_a/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/LifeProTips/comments/300w1y/lpt_improve_your_spelling_when_wordcheck_marks_a/">
+              LPT: Improve your spelling. When word-check marks a word as wrong, make four attempts to correct it yourself. Even if you get it wrong, you're likely to note where you got it wrong after you've had a go at fixing it yourself.</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/LifeProTips" class="ng-binding" href="http://www.reddit.com/r/LifeProTips">/r/LifeProTips</a> by: <a ng-href="http://www.reddit.com/user/ImpossibleKintsugi" target="_blank" class="ng-binding" href="http://www.reddit.com/user/ImpossibleKintsugi">ImpossibleKintsugi</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 2545 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/LifeProTips/comments/300w1y/lpt_improve_your_spelling_when_wordcheck_marks_a/" target="_blank" href="http://www.reddit.com/r/LifeProTips/comments/300w1y/lpt_improve_your_spelling_when_wordcheck_marks_a/"> <b class="ng-binding">194 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts --><div class="container ng-scope" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="https://www.youtube.com/watch?v=5A-4VGfx5lU" target="_blank">
+          <!-- ngIf: posts.data.thumbnail === '' --><img class="image ng-scope" ng-if="posts.data.thumbnail === &#39;&#39; " ng-src="img/RedditAlien.png" src="./dietReddit_files/RedditAlien.png"><!-- end ngIf: posts.data.thumbnail === '' -->
+          <!-- ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --><img class="image ng-scope" ng-if="posts.data.thumbnail !== null &amp;&amp; posts.data.thumbnail !== &#39;nswf&#39; " ng-src=""><!-- end ngIf: posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' --></a>
+
+      </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com/r/Music/comments/300wzw/animals_house_of_the_rising_sun_60s_rock_408/" target="_blank" class="ng-binding" href="http://www.reddit.com/r/Music/comments/300wzw/animals_house_of_the_rising_sun_60s_rock_408/">
+              Animals - House of the Rising Sun ['60s Rock] - [4:08]</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/Music" class="ng-binding" href="http://www.reddit.com/r/Music">/r/Music</a> by: <a ng-href="http://www.reddit.com/user/SReilly1977" target="_blank" class="ng-binding" href="http://www.reddit.com/user/SReilly1977">SReilly1977</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b class="ng-binding"> 2353 </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com/r/Music/comments/300wzw/animals_house_of_the_rising_sun_60s_rock_408/" target="_blank" href="http://www.reddit.com/r/Music/comments/300wzw/animals_house_of_the_rising_sun_60s_rock_408/"> <b class="ng-binding">251 </b> comments</a>
+
+        </div>
+      </div>
+
+    </div><!-- end ngRepeat: posts in posts -->
+</div>
+</div>
+
+  </div>
+  
+
+
+</body></html>
