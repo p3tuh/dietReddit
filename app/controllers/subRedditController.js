@@ -26,14 +26,21 @@ angular.module('subController', [])
   };
 
   $scope.nextPage = function() {
+
+    console.log('path: ', $scope.path);
     var busy = false;
-    
-    if (busy) {
+
+    if (!lastPost || busy) {
       return;
+    }
+    
+    if (!$scope.path) {
+      $scope.path = ''
+      console.log($scope.path);
     }
 
     busy = true;
-    
+
     feedService.nextPage($scope.path, lastPost)
       .then(function (data) {
         for (var i = 0; i < data.data.children.length; i++){

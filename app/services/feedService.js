@@ -25,10 +25,20 @@ angular.module('feedService', [])
   };
 
   var nextPage = function(subName, lastID) {
-    var url = 'http://api.reddit.com/r/' + subName + '/hot/?&after=t3_' + lastID;
+    var url;
+    
+    if (!subName) {
+      console.log('here');
+      url = 'http://api.reddit.com' + subName + '/hot/?&after=t3_' + lastID;
+    } else {
+      url = 'http://api.reddit.com/r/' + subName + '/hot/?&after=t3_' + lastID;
+    }
+
+    console.log(url);
 
     return $http.get(url)
       .then(function (resp) {
+        console.log(resp.data);
         return resp.data;
       })
       .catch(function (err) {
