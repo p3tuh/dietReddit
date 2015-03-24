@@ -26,8 +26,6 @@ angular.module('subController', [])
   };
 
   $scope.nextPage = function() {
-
-    console.log('path: ', $scope.path);
     var busy = false;
 
     if (!lastPost || busy) {
@@ -35,8 +33,7 @@ angular.module('subController', [])
     }
     
     if (!$scope.path) {
-      $scope.path = ''
-      console.log($scope.path);
+      $scope.path = '';
     }
 
     busy = true;
@@ -47,8 +44,8 @@ angular.module('subController', [])
           $scope.posts.push(data.data.children[i]);
         }
         busy = false;
-        console.log($scope.posts.length);
-      })
+        lastPost = $scope.posts[$scope.posts.length-1].data.id;
+      });
   };
 
   $scope.getPosts($scope.path);
