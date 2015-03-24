@@ -20,7 +20,7 @@
 	width: 60%;
 	height: 128px;
 	position: relative;
-	display: table-cell;
+	display: inline-block;
 	vertical-align: middle;
 }
 
@@ -39,6 +39,5 @@
 }
 
 .text {
-	display: inline-block;
-	margin-left: 10px;
+	position: absolute;
 }

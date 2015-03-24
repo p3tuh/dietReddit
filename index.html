@@ -4,25 +4,23 @@
     <meta charset="utf-8">
     <title>dietReddit</title>
 
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
 
   <body>
   <div ng-app="dietReddit">
-    <script src="https://code.angularjs.org/1.3.14/angular.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
 
     <script src="app/app.js"></script>
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/dashController.js"></script>
     <script src="app/services/feedService.js"></script>
+    <script src="app/controllers/subRedditController.js"></script>
 
-
-    <!-- <header ng-include="'app/templates/nav.html'"></header> -->
-
-    <div ui-view class="container slide"></div>
+    <div ui-view></div>
 
   </div>
   </body>

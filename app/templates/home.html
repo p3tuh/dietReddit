@@ -1,19 +1,41 @@
 <div>
   <h1>Front Page</h1>
-  <div ng-repeat="posts in posts track by posts.data.id">
-      <div>
-        <a href="{{ posts.data.url }}" target="_blank">
-          <img ng-src="{{ posts.data.thumbnail }}"/>
-        </a>
 
-        <a href="{{ posts.data.url }}" target="_blank">
+   <form ng-submit="changeSubreddit(subName)">
+    Switch to another Subreddit: <input type="text" ng-model="subName" />
+  </form>
 
-        Author: <a ng-href="http://www.reddit.com/user/{{ posts.data.author }}" target="_blank">{{ posts.data.author }}</a><br>
-        
-        Upvotes: {{ posts.data.ups }}<br>
-        
-        <a ng-href="http://www.reddit.com{{ posts.data.permalink }}" target="_blank">Comments</a>
-        </a>
+  <div class="container" ng-repeat="posts in posts">
+
+      <div class="postImage">
+        <a href="{{ posts.data.url }}" target="_blank">
+          <img class="image" ng-if="posts.data.thumbnail === '' " ng-src="img/RedditAlien.png"/>
+          <img class="image" ng-if="posts.data.thumbnail !== null && posts.data.thumbnail !== 'nswf' " ng-src="{{ posts.data.thumbnail }}"/></a>
+
       </div>
+
+      <div class="postText">
+        <div class="text">
+          <span class="title">
+            <a ng-href="http://www.reddit.com{{ posts.data.permalink }}" target="_blank">
+              {{ posts.data.title }}</a>
+          </span>
+          <br> 
+
+          <span class="tagline"> 
+            to <a ng-href="http://www.reddit.com/r/{{ posts.data.subreddit }}">/r/{{ posts.data.subreddit }}</a> by: <a ng-href="http://www.reddit.com/user/{{ posts.data.author }}" target="_blank">{{ posts.data.author }}</a> 
+          </span>
+          <br>
+
+          <span class="tagline"> 
+            Upvotes: <b> {{ posts.data.ups }} </b> 
+          </span> 
+          <br>
+          
+          <a ng-href="http://www.reddit.com{{ posts.data.permalink }}" target="_blank"> <b>{{ posts.data.num_comments }} </b> comments</a>
+
+        </div>
+      </div>
+
     </div>
 </div>

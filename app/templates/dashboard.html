@@ -3,7 +3,8 @@
   <form ng-submit="addSubreddit(name)">
     Enter a subreddit to add: <input type="text" ng-model="name" />
   </form>
-  <div ng-repeat="posts in posts track by posts.data.id">
+  <!-- <div ng-repeat="posts in posts track by posts.data.id"> -->
+  <div ng-repeat="posts in posts">
       <div>
         <a href="{{ posts.data.url }}" target="_blank">
           <img ng-if="posts.data.thumbnail === '' || posts.data.thumbnail === 'self' " ng-src="img/RedditAlien.png"/>
